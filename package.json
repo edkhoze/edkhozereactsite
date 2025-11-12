@@ -1,7 +1,7 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "edkhozereactsite",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "homepage": "https://edkhoze.github.io/edkhozereactsite/",
   "type": "module",
   "scripts": {
