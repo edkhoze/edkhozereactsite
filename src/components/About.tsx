@@ -11,24 +11,24 @@ const About = () => {
     {
       icon: Briefcase,
       title: "20+ Years",
-      description: "Industry Experience",
+      description: "Industry Experience across multiple verticals",
       clickable: true,
       href: "experience"
     },
     {
       icon: Globe,
       title: "Global",
-      description: "AU, USA, Europe, Singapore"
+      description: "Australia, USA, Europe, Singapore"
     },
     {
       icon: Users,
-      title: "Team Leadership",
-      description: "Managing up to 12 people"
+      title: "Delivery Management",
+      description: "Agile (Scrum, Kanban). Managing team of up to 12 ppl",
     },
     {
       icon: Award,
       title: "Certified",
-      description: "Azure, Sitecore Expert",
+      description: "MCAD, Azure (2 certificates). Sitecore (4 certificates)",
       clickable: true,
       href: "education"
     }
