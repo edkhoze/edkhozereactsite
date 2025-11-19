@@ -2,11 +2,18 @@ import { Card } from "@/components/ui/card";
 import { Award, Users, Briefcase, Globe } from "lucide-react";
 
 const About = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const highlights = [
     {
       icon: Briefcase,
       title: "20+ Years",
-      description: "Industry Experience"
+      description: "Industry Experience",
+      clickable: true,
+      href: "experience"
     },
     {
       icon: Globe,
@@ -21,7 +28,9 @@ const About = () => {
     {
       icon: Award,
       title: "Certified",
-      description: "Azure, Sitecore Expert"
+      description: "Azure, Sitecore Expert",
+      clickable: true,
+      href: "education"
     }
   ];
 
@@ -62,7 +71,10 @@ const About = () => {
             {highlights.map((item, index) => (
               <Card 
                 key={index}
-                className="p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 border-border/50"
+                onClick={() => item.clickable && scrollToSection(item.href)}
+                className={`p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 border-border/50 ${
+                  item.clickable ? 'cursor-pointer hover:scale-105 hover:border-primary/50' : ''
+                }`}
               >
                 <item.icon className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
