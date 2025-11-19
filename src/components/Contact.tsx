@@ -69,8 +69,8 @@ const Contact = () => {
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-foreground mb-1">Citizenship & Working Rights</h3>
-                  <p className="text-muted-foreground">Australian Citizen - Full working rights in Australia</p>
+                  <h3 className="font-semibold text-foreground mb-1">Working Rights</h3>
+                  <p className="text-muted-foreground">Full working rights in Australia</p>
                 </div>
               </div>
               
