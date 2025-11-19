@@ -28,9 +28,9 @@ const Skills = () => {
       icon: Cloud,
       title: "Cloud Platforms",
       skills: [
-        "Microsoft Azure",
-        "Vercel",
-        "AWS"
+        "Microsoft Azure (IaaS, PaaS, API Management)",
+        "Amazon Web Services (AWS)",
+        "Vercel"
       ]
     },
     {
@@ -58,11 +58,12 @@ const Skills = () => {
       icon: Code,
       title: "Software Development",
       skills: [
-        "Microsoft Stack, .NET, Azure",
-        "Sitecore CMS (MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP/Personalize)",
-        "React, Angular, Next.js, Node.js, TypeScript, HTML, CSS, JavaScript",
+        "Microsoft Stack (.NET, C#), Azure",
+        "Sitecore DXP (MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP/Personalize)",
+        "React, Next.js, Angular, Node.js, TypeScript",
+        "HTML, CSS, JavaScript",
         "API Development (.NET, Apigee, Azure API Management, Swagger, Postman)",
-        "MS SQL Server, Cosmos DB",
+        "Databases: MS SQL Server, Cosmos DB, MongoDB",
         "AI Tools (GitHub Copilot, Claude Code, Cursor)"
       ]
     }

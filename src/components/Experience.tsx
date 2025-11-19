@@ -5,26 +5,37 @@ const Experience = () => {
   const experiences = [
     {
       period: "July 2025 - Present",
-      company: "Independent Consultant - Erudit Pty Ltd",
+      company: "Independent Consultant - Director, Erudit Pty Ltd",
       role: "Solution Architect",
       location: "Melbourne, Australia",
-      description: "After returning from the US, continuing to consult in the following areas: Solution Design, Sitecore DXP, .NET, and Microsoft Azure.",
-      technologies: "Sitecore, .NET, Microsoft Azure"
+      description: "After returning to Australia from the US, continuing to consult in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools.",
+      achievements: [],
+      technologies: "Sitecore, .NET, Microsoft Azure, AWS"
     },
     {
       period: "January 2020 – May 2025",
       company: "EPAM Systems",
       role: "Solution Architect - Sitecore CMS, Azure Cloud, .NET, APIs",
       location: "Houston, Texas, USA",
-      description: "Solution Architect / Technical Lead for several large Sitecore CMS, Azure Cloud and .NET Core implementations. Clients include some well-known Fortune 500 companies.",
-      technologies: "Sitecore 8.2 – 10.4, MVC / Headless / XM Cloud, .NET Core, SQL Server, Azure, Azure DevOps, Azure API Management, Apigee, Solr & Solr Cloud, PingAccess & PingFederate, Selenium & Specflow, JMeter, New Relic, AI Assistants"
+      description: "Architected and led the delivery of large-scale enterprise web implementations for Fortune 500 clients. Managed cross-functional teams of developers, QAs, and DevOps engineers. Delivered solutions using Sitecore DXP, MVC/Headless/XM Cloud, Azure/AWS Cloud platforms, API Management, Search, IAM, and Observability tools. Oversaw CI/CD pipeline setup, automated testing, and cloud migration projects.",
+      achievements: [
+        "Delivered large web implementations on time and within budget",
+        "Featured in EPAM quarterly investor presentations as key client wins",
+        "Improved performance (response times) on some sites by 50%"
+      ],
+      technologies: "Sitecore 8.2 – 10.4, MVC / Headless / XM Cloud, .NET Core, SQL Server, Azure, AWS, Azure DevOps, Azure API Management, Apigee, Solr & Solr Cloud, PingAccess & PingFederate, Selenium & Specflow, JMeter, New Relic, AI Assistants"
     },
     {
       period: "December 2015 – September 2019",
-      company: "Independent Sitecore Consultant",
+      company: "Independent Sitecore Consultant - Director, Erudit Pty Ltd",
       role: "Solution Architect - Sitecore",
       location: "Melbourne & Perth, Australia",
-      description: "Consultant / Contractor for several large Sitecore projects, typically in a role of a Solution Architect.",
+      description: "Served as Solution Architect for multiple enterprise web/Sitecore projects. Designed and implemented large web solutions, led teams in Agile and Waterfall environments, conducted requirements analysis, solution architecture, and client presentations.",
+      achievements: [
+        "Automated deployments (CI/CD pipelines) reducing deployment time from hours to minutes",
+        "Significantly reduced deploy error rates",
+        "Improved performance by 20-25% faster time to first byte through caching optimization and load testing refinement"
+      ],
       technologies: "Sitecore 6.5 – 10.4, MVC / Headless / XM Cloud, Umbraco CMS, Tessitura, .NET 3.5 – 4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB"
     },
     {
@@ -32,23 +43,26 @@ const Experience = () => {
       company: "Grid Concepts",
       role: "Development Manager",
       location: "Melbourne, Australia",
-      description: "Managing a team of developers, building a variety of web-based, as well as native mobile projects / products for SMEs. Responsible for project management and delivery; development vertical P&L.",
+      description: "Managed development teams delivering web and mobile applications for SMEs. Responsible for project management and delivery, implementing Agile methodologies and optimizing team performance.",
+      achievements: [],
       technologies: ".NET 4.0 & 4.5, ASP.NET MVC, VS2012 & VS2013, MS Visio, Git + BitBucket, JIRA Agile, TeamworkPM, MS Azure, AWS, PHP (WordPress, CodeIgniter), Xamarin for mobile dev"
     },
     {
       period: "June 2011 – March 2013",
-      company: "KIT Digital",
+      company: "KIT Digital (Sputnik Agency)",
       role: "Technical Architect, Development Lead",
       location: "Australia, Singapore",
-      description: "Leading projects from the technical perspective - solution design & development, helping sales team with pre-sales process (writing proposals, liaising with clients, working through proposed system architecture).",
+      description: "Led technical design and development for enterprise web and mobile apps. Supported pre-sales activities – responding to RFIs/RFPs, liaising with clients, working through proposed system architecture.",
+      achievements: [],
       technologies: ".NET 3.5 & 4.0, Sitecore CMS 6.1 – 6.5, SQL Server 2008, Java 1.6, Objective-C + XCode (iOS)"
     },
     {
-      period: "February 2003 – October 2008",
+      period: "February 2003 – April 2011",
       company: "Barclays Capital, DXC Technology, Infotrak Pty Ltd",
-      role: "Software Engineer in .NET & Java",
+      role: "Software Engineer - .NET & Java",
       location: "Europe, Singapore",
-      description: "Early Career in Software Development in Financial Services and Enterprise Web Applications.",
+      description: "Early career in software development in Financial Services and Enterprise Web Applications.",
+      achievements: [],
       technologies: ".NET, Java, SQL Server"
     }
   ];
@@ -93,6 +107,20 @@ const Experience = () => {
                     <p className="text-foreground mb-3 leading-relaxed">
                       {exp.description}
                     </p>
+                    
+                    {exp.achievements && exp.achievements.length > 0 && (
+                      <div className="mb-3 p-3 bg-accent/5 rounded-lg border border-accent/20">
+                        <p className="text-sm font-medium text-accent mb-2">Key Achievements:</p>
+                        <ul className="text-sm text-foreground space-y-1">
+                          {exp.achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-accent mt-1">✓</span>
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     
                     <div className="text-sm text-muted-foreground">
                       <span className="font-medium">Technologies:</span> {exp.technologies}

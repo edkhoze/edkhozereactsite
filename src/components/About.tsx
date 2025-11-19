@@ -41,10 +41,21 @@ const About = () => {
               Singapore and the USA. I have a wealth of experience delivering large and complex 
               projects for Fortune 500 companies.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               I possess solid team management skills, ability to work under pressure, passion for 
               learning new technology, as well as strong customer focus.
             </p>
+            <p className="text-lg text-foreground font-semibold mb-4">
+              I specialise in the following areas:
+            </p>
+            <ul className="text-base text-muted-foreground leading-relaxed space-y-2">
+              <li>• <span className="font-medium text-foreground">Solution Design and Architecture</span> – Requirements gathering, Functional/Non-Functional specs, Miro, MS Visio, Draw.io</li>
+              <li>• <span className="font-medium text-foreground">Delivery & Team Management</span> – Agile (Scrum, Kanban), Waterfall, managing teams up to 12 people</li>
+              <li>• <span className="font-medium text-foreground">Cloud Platforms</span> – Microsoft Azure, AWS, Vercel</li>
+              <li>• <span className="font-medium text-foreground">DevOps</span> – CI/CD pipelines, Azure DevOps, ARM templates, PowerShell, GitHub Actions</li>
+              <li>• <span className="font-medium text-foreground">Technical Pre-Sales</span> – RFI/RFP responses, project estimates, solution presentations</li>
+              <li>• <span className="font-medium text-foreground">Software Development</span> – Microsoft Stack, .NET, Sitecore DXP, React, Next.js, Node.js, API development, AI tools</li>
+            </ul>
           </Card>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
