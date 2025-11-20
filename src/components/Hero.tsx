@@ -18,13 +18,14 @@ const Hero = () => {
               Edward Khoze
             </h1>
             <p className="text-2xl md:text-3xl text-primary font-medium">
-              Solution Architect & Technical Leader
+              Solution Architecture | Sitecore DXP | .NET | Azure
             </p>
           </div>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Over 20 years of experience in IT, half of which was spent in Australia, the other half overseas, 
-            in Europe, Singapore and the USA. Wealth of experience delivering large and complex projects for Fortune 500 companies.
+            in Europe, Singapore and the USA. Wealth of experience delivering large and complex projects for Fortune 500 companies, 
+            as well as small to medium enterprises.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center pt-4">
@@ -50,7 +51,9 @@ const Hero = () => {
           <div className="flex flex-wrap gap-6 justify-center pt-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>+61 423 632 922</span>
+              <a  href="tel:+61423632922" className="hover:text-primary transition-colors">
+                +61 423 632 922
+              </a>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />

@@ -48,7 +48,7 @@ const About = () => {
               I am a Solution Architect with over 20 years' experience in the IT industry, 
               half of which was spent in Australia, the other half overseas, in Europe, 
               Singapore and the USA. I have a wealth of experience delivering large and complex 
-              projects for Fortune 500 companies.
+              projects for Fortune 500 companies, as well as small to medium enterprises.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               I possess solid team management skills, ability to work under pressure, passion for 
@@ -58,12 +58,12 @@ const About = () => {
               I specialise in the following areas:
             </p>
             <ul className="text-base text-muted-foreground leading-relaxed space-y-2">
-              <li>• <span className="font-medium text-foreground">Solution Design and Architecture</span> – Requirements gathering, Functional/Non-Functional specs, Miro, MS Visio, Draw.io</li>
-              <li>• <span className="font-medium text-foreground">Delivery & Team Management</span> – Agile (Scrum, Kanban), Waterfall, managing teams up to 12 people</li>
+              <li>• <span className="font-medium text-foreground">Solution Design and Architecture</span> – Requirements gathering & analysis, defining functional & non-functional specs, specifying solution's quality attributes, constrains & assumptions</li>
+              <li>• <span className="font-medium text-foreground">Delivery & Team Management</span> – Agile (Scrum, Kanban), managing teams up to 12 people (back-end & front-end developers, QAs)</li>
               <li>• <span className="font-medium text-foreground">Cloud Platforms</span> – Microsoft Azure, AWS, Vercel</li>
-              <li>• <span className="font-medium text-foreground">DevOps</span> – CI/CD pipelines, Azure DevOps, ARM templates, PowerShell, GitHub Actions</li>
-              <li>• <span className="font-medium text-foreground">Technical Pre-Sales</span> – RFI/RFP responses, project estimates, solution presentations</li>
-              <li>• <span className="font-medium text-foreground">Software Development</span> – Microsoft Stack, .NET, Sitecore DXP, React, Next.js, Node.js, API development, AI tools</li>
+              <li>• <span className="font-medium text-foreground">DevOps</span> – CI/CD pipelines with Coded UI (Selenium) tests using infrastructure-as-code (IaC) approaches. Tools: Azure DevOps, ARM templates, Terraform, PowerShell scripts, Docker</li>
+              <li>• <span className="font-medium text-foreground">Technical Pre-Sales</span> – RFI / RFP responses, project estimates, proposed solution presentation</li>
+              <li>• <span className="font-medium text-foreground">Software Development</span> – .NET, MS Azure, Sitecore DXP (MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP / Personalize), Front-end (HTML, CSS, JS, React, Angular, Next.js, TypeScript), API development, AI tools, DBs (SQL, Cosmos DB, MongoDB)</li>
             </ul>
           </Card>
           

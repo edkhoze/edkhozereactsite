@@ -8,9 +8,11 @@ const Experience = () => {
       company: "Independent Consultant - Director, Erudit Pty Ltd",
       role: "Solution Architect",
       location: "Melbourne, Australia",
-      description: "After returning to Australia from the US, continuing to consult in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools.",
+      description: "Continuing to consult after returning to Australia from my stint at EPAM in the US. Currently specializing in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools.",
       achievements: [],
-      technologies: "Sitecore, .NET, Microsoft Azure, AWS"
+      technologies: "Sitecore, .NET, Microsoft Azure, AWS",
+      isErudit: true,
+      isResumed: true
     },
     {
       period: "January 2020 – May 2025",
@@ -34,9 +36,10 @@ const Experience = () => {
       achievements: [
         "Automated deployments (CI/CD pipelines) reducing deployment time from hours to minutes",
         "Significantly reduced deploy error rates",
-        "Improved performance by 20-25% faster time to first byte through caching optimization and load testing refinement"
+        "Improved performance (time to first byte) by 20-25% through caching optimizations and load testing refinement"
       ],
-      technologies: "Sitecore 6.5 – 10.4, MVC / Headless / XM Cloud, Umbraco CMS, Tessitura, .NET 3.5 – 4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB"
+      technologies: "Sitecore 6.5 – 10.4, MVC / Headless / XM Cloud, Umbraco CMS, Tessitura, .NET 3.5 – 4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB",
+      isErudit: true
     },
     {
       period: "March 2013 – October 2015",
@@ -83,10 +86,21 @@ const Experience = () => {
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative">
+                  {/* Connector badge for resumed Erudit */}
+                  {exp.isResumed && (
+                    <div className="flex justify-center mb-4">
+                      <div className="inline-block px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs font-semibold text-accent">
+                        ↻ Resumed consulting in Australia
+                      </div>
+                    </div>
+                  )}
+                  
                   {/* Timeline dot */}
                   <div className="absolute left-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 hidden md:block"></div>
                   
-                  <Card className="md:ml-16 p-6 shadow-md hover:shadow-lg transition-all duration-300 border-border/50">
+                  <Card className={`md:ml-16 p-6 shadow-md hover:shadow-lg transition-all duration-300 border-border/50 ${
+                    exp.isErudit ? 'bg-gradient-to-r from-accent/8 via-transparent to-transparent border-accent/30 border-l-4' : ''
+                  }`}>
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                       <div className="mb-2 md:mb-0">
                         <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>

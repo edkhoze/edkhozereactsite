@@ -8,28 +8,25 @@ const Skills = () => {
       icon: Layers,
       title: "Solution Design & Architecture",
       skills: [
-        "Requirements Gathering & Analysis",
-        "Functional & Non-Functional Specs",
-        "Miro, MS Visio, Draw.io",
-        "MS Project, JIRA, Azure DevOps, Trello"
+        "Requirements gathering & analysis",
+        "Defining functional & non-functional specs",
+        "Specifying solution's quality attributes, constraints & assumptions"
       ]
     },
     {
       icon: Users,
       title: "Delivery & Team Management",
       skills: [
-        "Agile (Scrum, Kanban)",
-        "Waterfall",
-        "Team Management (up to 12 people)",
-        "Back-end & Front-end Developers, QAs"
+        "Agile: Scrum, Kanban",
+        "Team Management: Up to 12 people"
       ]
     },
     {
       icon: Cloud,
       title: "Cloud Platforms",
       skills: [
-        "Microsoft Azure (IaaS, PaaS, API Management)",
-        "Amazon Web Services (AWS)",
+        "MS Azure (Sitecore PaaS, API Management, Containers, App Services, Functions, Storage, Event Grid / Event Hubs)",
+        "AWS",
         "Vercel"
       ]
     },
@@ -37,34 +34,35 @@ const Skills = () => {
       icon: GitBranch,
       title: "DevOps",
       skills: [
-        "CI/CD Pipelines",
+        "CI / CD Pipelines",
+        "infrastructure-as-code (IaC)",
         "Azure DevOps",
         "ARM Templates",
         "PowerShell Scripts",
-        "GitHub Actions",
-        "Unit & Selenium Tests"
+        "Docker",
+        "Selenium UI Tests",
+        "Terraform"
       ]
     },
     {
       icon: PresentationIcon,
       title: "Technical Pre-Sales",
       skills: [
-        "RFI / RFP Responses",
-        "Project Estimates",
-        "Solution Presentations"
+        "RFI / RFP responses",
+        "Project estimates",
+        "Proposed solution presentations"
       ]
     },
     {
       icon: Code,
       title: "Software Development",
       skills: [
-        "Microsoft Stack (.NET, C#), Azure",
-        "Sitecore DXP (MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP/Personalize)",
-        "React, Next.js, Angular, Node.js, TypeScript",
-        "HTML, CSS, JavaScript",
-        "API Development (.NET, Apigee, Azure API Management, Swagger, Postman)",
+        "Microsoft Stack: .NET, C#, Azure platform",
+        "Sitecore DXP: MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP / Personalize",
+        "Front-end: HTML, CSS, JS, React, Angular, Next.js, TypeScript",
+        "API Development (Web APIs, Google Apigee, Azure API Management, Swagger, Postman)",
         "Databases: MS SQL Server, Cosmos DB, MongoDB",
-        "AI Tools (GitHub Copilot, Claude Code, Cursor)"
+        "AI Tools: GitHub Copilot, Claude Code, Cursor, Lovable.dev"
       ]
     }
   ];
