@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <!-- Face -->
+  <circle cx="128" cy="128" r="110" fill="#ffd700" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- Left eye white -->
+  <circle cx="95" cy="105" r="22" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Right eye white -->
+  <circle cx="161" cy="105" r="22" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Left pupil -->
+  <circle cx="95" cy="110" r="13" fill="#1a1a1a"/>
+  
+  <!-- Right pupil -->
+  <circle cx="161" cy="110" r="13" fill="#1a1a1a"/>
+  
+  <!-- Left glasses frame -->
+  <rect x="68" y="80" width="54" height="48" rx="10" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- Right glasses frame -->
+  <rect x="134" y="80" width="54" height="48" rx="10" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- Glasses bridge -->
+  <line x1="128" y1="95" x2="128" y2="113" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- Nose -->
+  <polygon points="128,125 123,140 133,140" fill="#1a1a1a"/>
+  
+  <!-- Smile -->
+  <path d="M 105 155 Q 128 175 151 155" stroke="#1a1a1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>
