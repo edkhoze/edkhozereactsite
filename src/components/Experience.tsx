@@ -9,8 +9,11 @@ const Experience = () => {
       role: "Solution Architect",
       location: "Melbourne, Australia",
       description: "Continuing to consult after returning to Australia from my stint at EPAM in the US. Currently specializing in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools.",
+      descriptionBullets: [
+        "Continuing to consult after returning to Australia from my stint at EPAM in the US. Currently specializing in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools."
+      ],
       achievements: [],
-      technologies: "Sitecore, .NET, Microsoft Azure, AWS",
+      technologies: "Sitecore DXP, .NET, MS Azure, AI Tools",
       isErudit: true,
       isResumed: true
     },
@@ -20,25 +23,39 @@ const Experience = () => {
       role: "Solution Architect - Sitecore CMS, Azure Cloud, .NET, APIs",
       location: "Houston, Texas, USA",
       description: "Architected and led the delivery of large-scale enterprise web implementations for Fortune 500 clients. Managed cross-functional teams of developers, QAs, and DevOps engineers. Delivered solutions using Sitecore DXP, MVC/Headless/XM Cloud, Azure/AWS Cloud platforms, API Management, Search, IAM, and Observability tools. Oversaw CI/CD pipeline setup, automated testing, and cloud migration projects.",
-      achievements: [
-        "Delivered large web implementations on time and within budget",
-        "Featured in EPAM quarterly investor presentations as key client wins",
-        "Improved performance (response times) on some sites by 50%"
+      descriptionBullets: [
+        "Architected and led the delivery of large-scale enterprise web implementations for Fortune 500 clients.",
+        "Managed cross-functional teams of developers, QAs, and DevOps engineers.",
+        "Delivered solutions using Sitecore DXP (MVC/Headless/XM Cloud) and Azure & Vercel platforms; involving microservices, enterprise integration patterns, API Management (Azure, Google Apigee), advanced search features based on Solr & Coveo, as well as integration with IAM platforms, such as Ping and Observability solutions, such as New Relic.",
+        "Oversaw CI/CD pipeline setup (Azure DevOps, ARM templates, Terraform, Docker), automated testing (Selenium & Specflow, JMeter) and cloud migration projects.",
+        "Collaborated with stakeholders for requirements analysis and solution design."
       ],
-      technologies: "Sitecore 8.2 – 10.4, MVC / Headless / XM Cloud, .NET Core, SQL Server, Azure, AWS, Azure DevOps, Azure API Management, Apigee, Solr & Solr Cloud, PingAccess & PingFederate, Selenium & Specflow, JMeter, New Relic, AI Assistants"
+      achievements: [
+        "Delivered high profile search implementation for a key banking client on time and within budget, cementing further work from them.",
+        "Large healthcare engagement that I helped sell and then architected was featured in EPAM quarterly investor presentations as key client win.",
+        "Improved performance (response times) on some websites by up to 50%.",
+        "I was instrumental in researching and implementing prototype AI tools for Sitecore migrations, significantly (25% - 35%) reducing XM cloud migration effort."
+      ],
+      technologies: "Sitecore 8.2 – 10.4, MVC / Headless / XM Cloud, .NET Core, SQL Server, Azure, AWS, Vercel, Azure DevOps, Azure API Management, Apigee, Solr & Solr Cloud, PingAccess & PingFederate, Selenium & Specflow, JMeter, New Relic, Internal AI tools"
     },
     {
       period: "December 2015 – September 2019",
       company: "Independent Sitecore Consultant - Director, Erudit Pty Ltd",
       role: "Solution Architect - Sitecore",
       location: "Melbourne & Perth, Australia",
-      description: "Served as Solution Architect for multiple enterprise web/Sitecore projects. Designed and implemented large web solutions, led teams in Agile and Waterfall environments, conducted requirements analysis, solution architecture, and client presentations.",
-      achievements: [
-        "Automated deployments (CI/CD pipelines) reducing deployment time from hours to minutes",
-        "Significantly reduced deploy error rates",
-        "Improved performance (time to first byte) by 20-25% through caching optimizations and load testing refinement"
+      description: "Served as Solution Architect for multiple enterprise Web / Sitecore projects. Designed and implemented large enterprise solutions, led teams in Agile environments, conducted requirements analysis, solution architecture, and client presentations.",
+      descriptionBullets: [
+        "Served as Solution Architect for multiple enterprise Web / Sitecore projects.",
+        "Designed and implemented large enterprise solutions.",
+        "Led teams in Agile environments, ensuring timely delivery and quality of the solution.",
+        "Conducted requirements analysis, solution architecture, and client presentations."
       ],
-      technologies: "Sitecore 6.5 – 10.4, MVC / Headless / XM Cloud, Umbraco CMS, Tessitura, .NET 3.5 – 4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB",
+      achievements: [
+        "Automated deployments (CI/CD pipelines), in some instances reducing deployment time from hours (manual) to minutes.",
+        "Significantly reduced error rates resulting from manual deployments.",
+        "Improved performance (time to first byte) by 20-25% through caching optimizations and load testing refinement."
+      ],
+      technologies: "Sitecore 6.5 – 9.1, Tessitura, .NET 3.5 – 4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB",
       isErudit: true
     },
     {
@@ -47,6 +64,11 @@ const Experience = () => {
       role: "Development Manager",
       location: "Melbourne, Australia",
       description: "Managed development teams delivering web and mobile applications for SMEs. Responsible for project management and delivery, implementing Agile methodologies and optimizing team performance.",
+      descriptionBullets: [
+        "Managed development teams, delivering web and mobile applications for SMEs.",
+        "Responsible for project management and delivery.",
+        "Implemented Agile methodologies and optimized team performance."
+      ],
       achievements: [],
       technologies: ".NET 4.0 & 4.5, ASP.NET MVC, VS2012 & VS2013, MS Visio, Git + BitBucket, JIRA Agile, TeamworkPM, MS Azure, AWS, PHP (WordPress, CodeIgniter), Xamarin for mobile dev"
     },
@@ -56,6 +78,10 @@ const Experience = () => {
       role: "Technical Architect, Development Lead",
       location: "Australia, Singapore",
       description: "Led technical design and development for enterprise web and mobile apps. Supported pre-sales activities – responding to RFIs/RFPs, liaising with clients, working through proposed system architecture.",
+      descriptionBullets: [
+        "Led technical design and development for enterprise web and mobile apps.",
+        "Supported pre-sales activities – responding to RFIs / RFPs, liaising with clients, working through proposed system architecture."
+      ],
       achievements: [],
       technologies: ".NET 3.5 & 4.0, Sitecore CMS 6.1 – 6.5, SQL Server 2008, Java 1.6, Objective-C + XCode (iOS)"
     },
@@ -65,6 +91,9 @@ const Experience = () => {
       role: "Software Engineer - .NET & Java",
       location: "Europe, Singapore",
       description: "Early career in software development in Financial Services and Enterprise Web Applications.",
+      descriptionBullets: [
+        "Early career in software development in Financial Services and Enterprise Web Applications."
+      ],
       achievements: [],
       technologies: ".NET, Java, SQL Server"
     }
@@ -118,9 +147,20 @@ const Experience = () => {
                       </div>
                     </div>
                     
-                    <p className="text-foreground mb-3 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    {exp.descriptionBullets ? (
+                      <ul className="text-foreground mb-3 leading-relaxed space-y-2">
+                        {exp.descriptionBullets.map((bullet, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="text-primary font-bold mt-1">•</span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-foreground mb-3 leading-relaxed">
+                        {exp.description}
+                      </p>
+                    )}
                     
                     {exp.achievements && exp.achievements.length > 0 && (
                       <div className="mb-3 p-3 bg-accent/5 rounded-lg border border-accent/20">

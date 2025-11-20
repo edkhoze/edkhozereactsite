@@ -11,9 +11,9 @@ const Achievements = () => {
     },
     {
       icon: Award,
-      metric: "Fortune 500",
-      title: "Featured Client Wins",
-      description: "Recognized in EPAM quarterly investor presentations as key success stories"
+      metric: "Successful Delivery",
+      title: "Key Client Win",
+      description: "Large healthcare engagement that I helped sell and then architected was featured in EPAM quarterly investor presentations as key client win"
     },
     {
       icon: Zap,
