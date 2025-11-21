@@ -72,7 +72,7 @@ const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Expertise</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">I specialise in the following areas</h2>
             <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
           </div>
           
