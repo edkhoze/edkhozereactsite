@@ -7,7 +7,7 @@ const ClientsProjects = () => {
       name: "IMF",
       logo: "/logos/imf.png",
       website: "https://www.imf.org/en/home",
-      description: "Sitecore 9.3 MVC maintenance project + moving legacystatic pages to Vercel"
+      description: "Sitecore 9.3 MVC maintenance project + moving legacy static pages to Vercel"
     },
     {
       name: "Lexus",
@@ -74,6 +74,30 @@ const ClientsProjects = () => {
       logo: "/logos/sanitarium.png",
       website: "https://www.sanitarium.com/au",
       description: "Developing brand new Sanitarium website for Australia & New Zealand"
+    },
+    {
+      name: "Textron Aviation",
+      logo: "/logos/textron-aviation.svg",
+      website: "https://txtav.com",
+      description: "Sitecore 10.3 Headless implementation + Aircraft Specs data project"
+    },
+    {
+      name: "OneGeisinger",
+      logo: "/logos/geisinger.png",
+      website: "https://www.geisinger.org",
+      description: "Large digital transformation effort to introduce digital front door"
+    },
+    {
+      name: "Homebase / Bunnings",
+      logo: "/logos/homebase.png",
+      website: "https://www.homebase.co.uk",
+      description: "Replatforming Homebase e-commerce storefront after Bunnings acquisition"
+    },
+    {
+      name: "Bayer ANZ",
+      logo: "/logos/bayer.svg",
+      website: "https://www.bayer.com.au/",
+      description: "Building brand new Bayer intranet on Sitecore + 3rd party integrations"
     }
   ];
 
