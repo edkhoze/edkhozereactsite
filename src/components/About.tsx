@@ -47,8 +47,8 @@ const About = () => {
             <p className="text-lg text-foreground leading-relaxed mb-4">
               I am a Solution Architect with over 20 years' experience in the IT industry, 
               half of which was spent in Australia, the other half overseas, in Europe, 
-              Singapore and the USA. I have a wealth of experience delivering large and complex 
-              projects for Fortune 500 companies, as well as small to medium enterprises.
+              Singapore and the USA. I have a proven track record delivering large and complex projects 
+              for Fortune 500 companies, as well as small to medium enterprises.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               I possess solid team management skills, ability to work under pressure, passion for 
