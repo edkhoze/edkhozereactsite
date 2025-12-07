@@ -24,8 +24,8 @@ const Hero = () => {
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Over 20 years of experience in IT, half of which was spent in Australia, the other half overseas, 
-            in Europe, Singapore and the USA. Wealth of experience delivering large and complex projects for Fortune 500 companies, 
-            as well as small to medium enterprises.
+            in Europe, Singapore and the USA. Proven track record delivering large and complex projects 
+              for Fortune 500 companies, as well as small to medium enterprises.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center pt-4">
