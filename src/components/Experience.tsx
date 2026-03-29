@@ -1,188 +1,387 @@
-import { Card } from "@/components/ui/card";
-import { Briefcase, MapPin } from "lucide-react";
-
 const Experience = () => {
   const experiences = [
     {
       period: "July 2025 - Present",
-      company: "Independent Consultant - Director, Erudit Pty Ltd",
-      role: "Solution Architect",
+      company: "Erudit Pty Ltd",
+      role: "Independent Consultant",
       location: "Melbourne, Australia",
-      description: "Continuing to consult after returning to Australia from my stint at EPAM in the US. Currently specializing in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools.",
       descriptionBullets: [
-        "Continuing to consult after returning to Australia from my stint at EPAM in the US. Currently specializing in the following areas: Solution Design, Sitecore DXP, .NET, Cloud (Azure, AWS), and AI tools."
+        "Continuing to consult after returning to Australia from my stint at EPAM in the US.",
+        "Currently specializing in: Solution Design, Enterprise Architecture, .NET / C#, Cloud (Azure, AWS), Python and AI-enabled system & tools.",
       ],
       achievements: [],
       technologies: "Sitecore DXP, .NET, MS Azure, AI Tools",
-      isErudit: true,
-      isResumed: true
+      borderColor: "border-primary",
+      dateColor: "text-primary-foreground",
+      roleColor: "text-terminal-cyan",
+      cardBg: "bg-surface",
+      hoverBg: "group-hover:bg-surface-high",
+      featured: true,
     },
     {
       period: "January 2020 – May 2025",
       company: "EPAM Systems",
-      role: "Solution Architect - Sitecore CMS, Azure Cloud, .NET, APIs",
+      role: "Solution Architect",
       location: "Houston, Texas, USA",
-      description: "Architected and led the delivery of large-scale enterprise web implementations for Fortune 500 clients. Managed cross-functional teams of developers, QAs, and DevOps engineers. Delivered solutions using Sitecore DXP, MVC/Headless/XM Cloud, Azure/AWS Cloud platforms, API Management, Search, IAM, and Observability tools. Oversaw CI/CD pipeline setup, automated testing, and cloud migration projects.",
       descriptionBullets: [
-        "Architected and led the delivery of large-scale enterprise web implementations for Fortune 500 clients.",
+        "Architected and led delivery of large-scale enterprise web implementations for Fortune 500 clients.",
         "Managed cross-functional teams of developers, QAs, and DevOps engineers.",
-        "Delivered solutions using Sitecore DXP (MVC/Headless/XM Cloud) and Azure & Vercel platforms; involving microservices, enterprise integration patterns, API Management (Azure, Google Apigee), advanced search features based on Solr & Coveo, as well as integration with IAM platforms, such as Ping and Observability solutions, such as New Relic.",
+        "Delivered solutions using Sitecore DXP (MVC/Headless/XM Cloud), Azure & Vercel; microservices, API Management (Azure, Apigee), Solr & Coveo search, IAM (Ping), and observability (New Relic).",
         "Oversaw CI/CD pipeline setup (Azure DevOps, ARM templates, Terraform, Docker), automated testing (Selenium & Specflow, JMeter) and cloud migration projects.",
-        "Collaborated with stakeholders for requirements analysis and solution design."
+        "Collaborated with stakeholders for requirements analysis and solution design.",
       ],
       achievements: [
-        "Delivered high profile search implementation for a key banking client on time and within budget, cementing further work from them.",
-        "Large healthcare engagement that I helped sell and then architected was featured in EPAM quarterly investor presentations as key client win.",
+        "Delivered high-profile search implementation for a key banking client on time and within budget.",
+        "Healthcare engagement I helped sell and architected was featured in EPAM quarterly investor presentations as key client win.",
         "Improved performance (response times) on some websites by up to 50%.",
-        "I was instrumental in researching and implementing prototype AI tools for Sitecore migrations, significantly (25% - 35%) reducing XM cloud migration effort."
+        "Researched and implemented prototype AI tools for Sitecore migrations, reducing XM Cloud migration effort by 25–35%.",
       ],
-      technologies: "Sitecore 8.2 – 10.4, MVC / Headless / XM Cloud, .NET Core, SQL Server, Azure, AWS, Vercel, Azure DevOps, Azure API Management, Apigee, Solr & Solr Cloud, PingAccess & PingFederate, Selenium & Specflow, JMeter, New Relic, Internal AI tools"
+      technologies:
+        "Sitecore 8.2–10.4, MVC / Headless / XM Cloud, .NET Core, SQL Server, Azure, AWS, Vercel, Azure DevOps, Azure API Management, Apigee, Solr & Solr Cloud, PingAccess & PingFederate, Selenium & Specflow, JMeter, New Relic",
+      borderColor: "border-terminal-cyan",
+      dateColor: "text-terminal-cyan",
+      roleColor: "text-primary-foreground",
+      cardBg: "bg-surface-low",
+      hoverBg: "group-hover:bg-surface",
+      featured: true,
     },
     {
       period: "December 2015 – September 2019",
-      company: "Independent Sitecore Consultant - Director, Erudit Pty Ltd",
-      role: "Solution Architect - Sitecore",
+      company: "Erudit Pty Ltd",
+      role: "Independent Consultant",
       location: "Melbourne & Perth, Australia",
-      description: "Served as Solution Architect for multiple enterprise Web / Sitecore projects. Designed and implemented large enterprise solutions, led teams in Agile environments, conducted requirements analysis, solution architecture, and client presentations.",
       descriptionBullets: [
-        "Served as Solution Architect for multiple enterprise Web / Sitecore projects.",
+        "Served as Solution Architect for multiple Web / Sitecore enterprise projects.",
         "Designed and implemented large enterprise solutions.",
-        "Led teams in Agile environments, ensuring timely delivery and quality of the solution.",
-        "Conducted requirements analysis, solution architecture, and client presentations."
+        "Led teams in Agile environments, ensuring timely delivery and quality.",
+        "Conducted requirements analysis, solution architecture, and client presentations.",
       ],
       achievements: [
-        "Automated deployments (CI/CD pipelines), in some instances reducing deployment time from hours (manual) to minutes.",
+        "Automated deployments (CI/CD pipelines), reducing deployment time from hours (manual) to minutes.",
         "Significantly reduced error rates resulting from manual deployments.",
-        "Improved performance (time to first byte) by 20-25% through caching optimizations and load testing refinement."
+        "Improved performance (TTFB) by 20–25% through caching optimizations and load testing.",
       ],
-      technologies: "Sitecore 6.5 – 9.1, Tessitura, .NET 3.5 – 4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB",
-      isErudit: true
+      technologies:
+        "Sitecore 6.5–9.1, Tessitura, .NET 3.5–4.6.1, ASP.NET Web Forms & MVC, MS SQL Server, TDS, Git, Octopus Deploy, Azure DevOps, MS Azure (IaaS & PaaS), GlassMapper, Autofac, AngularJS, jQuery, MongoDB",
+      borderColor: "border-primary",
+      dateColor: "text-primary-foreground",
+      roleColor: "text-terminal-cyan",
+      cardBg: "bg-surface-low",
+      hoverBg: "group-hover:bg-surface",
+      featured: true,
     },
     {
       period: "March 2013 – October 2015",
       company: "Grid Concepts",
       role: "Development Manager",
       location: "Melbourne, Australia",
-      description: "Managed development teams delivering web and mobile applications for SMEs. Responsible for project management and delivery, implementing Agile methodologies and optimizing team performance.",
       descriptionBullets: [
-        "Managed development teams, delivering web and mobile applications for SMEs.",
+        "Managed development teams delivering web and mobile applications for SMEs.",
         "Responsible for project management and delivery.",
-        "Implemented Agile methodologies and optimized team performance."
+        "Implemented Agile methodologies and optimized team performance.",
       ],
       achievements: [],
-      technologies: ".NET 4.0 & 4.5, ASP.NET MVC, VS2012 & VS2013, MS Visio, Git + BitBucket, JIRA Agile, TeamworkPM, MS Azure, AWS, PHP (WordPress, CodeIgniter), Xamarin for mobile dev"
+      technologies:
+        ".NET 4.0 & 4.5, ASP.NET MVC, VS2012 & VS2013, MS Visio, Git + BitBucket, JIRA Agile, TeamworkPM, MS Azure, AWS, PHP (WordPress, CodeIgniter), Xamarin",
+      borderColor: "border-terminal-cyan",
+      dateColor: "text-terminal-cyan",
+      roleColor: "text-muted-foreground",
+      cardBg: "bg-surface-low",
+      hoverBg: "group-hover:bg-surface",
+      featured: false,
     },
     {
       period: "June 2011 – March 2013",
       company: "KIT Digital (Sputnik Agency)",
       role: "Technical Architect, Development Lead",
       location: "Australia, Singapore",
-      description: "Led technical design and development for enterprise web and mobile apps. Supported pre-sales activities – responding to RFIs/RFPs, liaising with clients, working through proposed system architecture.",
       descriptionBullets: [
         "Led technical design and development for enterprise web and mobile apps.",
-        "Supported pre-sales activities – responding to RFIs / RFPs, liaising with clients, working through proposed system architecture."
+        "Supported pre-sales activities — RFIs / RFPs, client liaising, solution architecture.",
       ],
       achievements: [],
-      technologies: ".NET 3.5 & 4.0, Sitecore CMS 6.1 – 6.5, SQL Server 2008, Java 1.6, Objective-C + XCode (iOS)"
+      technologies:
+        ".NET 3.5 & 4.0, Sitecore CMS 6.1–6.5, SQL Server 2008, Java 1.6, Objective-C + XCode (iOS)",
+      borderColor: "border-border",
+      dateColor: "text-muted-foreground",
+      roleColor: "text-muted-foreground",
+      cardBg: "bg-surface-lowest",
+      hoverBg: "group-hover:bg-surface-low",
+      featured: false,
     },
     {
       period: "February 2003 – April 2011",
       company: "Barclays Capital, DXC Technology, Infotrak Pty Ltd",
-      role: "Software Engineer - .NET & Java",
+      role: "Software Engineer — .NET & Java",
       location: "Europe, Singapore",
-      description: "Early career in software development in Financial Services and Enterprise Web Applications.",
       descriptionBullets: [
-        "Early career in software development in Financial Services and Enterprise Web Applications."
+        "Early career in software development in Financial Services and Enterprise Web Applications.",
       ],
       achievements: [],
-      technologies: ".NET, Java, SQL Server"
-    }
+      technologies: ".NET, Java, SQL Server",
+      borderColor: "border-border",
+      dateColor: "text-muted-foreground",
+      roleColor: "text-muted-foreground",
+      cardBg: "bg-surface-lowest",
+      hoverBg: "group-hover:bg-surface-low",
+      featured: false,
+    },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Experience</h2>
-            <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
-            
-            <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <div key={index} className="relative">
-                  {/* Connector badge for resumed Erudit */}
-                  {exp.isResumed && (
-                    <div className="flex justify-center mb-4">
-                      <div className="inline-block px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-xs font-semibold text-accent">
-                        ↻ Resumed consulting in Australia
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Timeline dot */}
-                  <div className="absolute left-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 hidden md:block"></div>
-                  
-                  <Card className={`md:ml-16 p-6 shadow-md hover:shadow-lg transition-all duration-300 border-border/50 ${
-                    exp.isErudit ? 'bg-gradient-to-r from-accent/8 via-transparent to-transparent border-accent/30 border-l-4' : ''
-                  }`}>
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                      <div className="mb-2 md:mb-0">
-                        <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                        <div className="flex items-center gap-2 text-primary font-medium mt-1">
-                          <Briefcase className="h-4 w-4" />
-                          <span>{exp.company}</span>
-                        </div>
-                      </div>
-                      <div className="text-sm text-muted-foreground md:text-right">
-                        <div className="font-medium">{exp.period}</div>
-                        <div className="flex items-center gap-1 md:justify-end mt-1">
-                          <MapPin className="h-3 w-3" />
-                          <span>{exp.location}</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {exp.descriptionBullets ? (
-                      <ul className="text-foreground mb-3 leading-relaxed space-y-2">
+    <section id="experience" className="py-24 bg-background">
+      <div className="max-w-[1440px] mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="font-mono text-terminal-cyan text-2xl font-bold tracking-tight whitespace-nowrap">
+            // work_experience
+          </h2>
+          <div className="h-px flex-grow bg-border/20" />
+        </div>
+
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-primary/20 -translate-x-1/2" />
+
+          {/* Erudit group (entries 0–2) with continuation connector */}
+          <div className="relative space-y-12">
+            {/* Erudit continuation connector — dashed line on the left side */}
+            <div
+              className="hidden md:block absolute z-20"
+              style={{
+                left: "-16px",
+                top: 0,
+                bottom: 0,
+                width: "2px",
+                borderLeft: "2px dashed hsl(142 71% 45% / 0.35)",
+              }}
+            />
+            {/* Erudit label */}
+            <div
+              className="hidden md:block absolute z-20 font-mono text-[10px] text-terminal-green/50 uppercase tracking-widest"
+              style={{
+                left: "-14px",
+                top: "50%",
+                transform: "translateY(-50%) rotate(-90deg)",
+                transformOrigin: "center center",
+                whiteSpace: "nowrap",
+              }}
+            >
+              ← Erudit Pty Ltd →
+            </div>
+
+            {experiences.slice(0, 3).map((exp, index) => {
+              const isLeft = index % 2 === 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`relative flex flex-col ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                    } items-center justify-between gap-8 group`}
+                >
+                  {/* Card side */}
+                  <div
+                    className="md:w-5/12 text-left"
+                  >
+                    <div
+                      className={`${exp.cardBg} p-8 transition-all ${exp.hoverBg} border-l-4 ${exp.borderColor}`}
+                    >
+                      {/* Date */}
+                      <span
+                        className={`font-mono text-sm mb-2 block uppercase ${exp.dateColor}`}
+                      >
+                        {exp.period}
+                      </span>
+
+                      {/* Company */}
+                      <h3 className="font-bold text-2xl text-white">
+                        {exp.company}
+                      </h3>
+
+                      {/* Role */}
+                      <p className={`font-mono text-sm mb-4 ${exp.roleColor}`}>
+                        {exp.role}
+                      </p>
+
+                      {/* Location */}
+                      <p className="font-mono text-xs text-muted-foreground mb-4">
+                        {exp.location}
+                      </p>
+
+                      {/* Description bullets */}
+                      <ul className="space-y-2 text-muted-foreground text-sm">
                         {exp.descriptionBullets.map((bullet, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <span className="text-primary font-bold mt-1">•</span>
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2"
+                          >
+                            <span className="font-mono text-terminal-green shrink-0">
+                              &gt;
+                            </span>
                             <span>{bullet}</span>
                           </li>
                         ))}
                       </ul>
-                    ) : (
-                      <p className="text-foreground mb-3 leading-relaxed">
-                        {exp.description}
-                      </p>
-                    )}
-                    
-                    {exp.achievements && exp.achievements.length > 0 && (
-                      <div className="mb-3 p-3 bg-accent/5 rounded-lg border border-accent/20">
-                        <p className="text-sm font-medium text-accent mb-2">Key Achievements:</p>
-                        <ul className="text-sm text-foreground space-y-1">
-                          {exp.achievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <span className="text-accent mt-1">✓</span>
-                              <span>{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    
-                    <div className="text-sm text-muted-foreground">
-                      <span className="font-medium">Technologies:</span> {exp.technologies}
+
+                      {/* Achievements */}
+                      {exp.achievements.length > 0 && (
+                        <div className="mt-4 p-4 bg-surface-high/50 border-l-2 border-terminal-green">
+                          <p className="font-mono text-xs text-terminal-green mb-2">
+                            // achievements
+                          </p>
+                          <ul className="text-sm text-foreground space-y-1">
+                            {exp.achievements.map((achievement, idx) => (
+                              <li
+                                key={idx}
+                                className="flex items-start gap-2"
+                              >
+                                <span className="text-terminal-green shrink-0">
+                                  ✓
+                                </span>
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Tech stack */}
+                      {/* <p className="font-mono text-xs text-muted-foreground/60 mt-4">
+                        <span className="text-terminal-cyan">stack: </span>
+                        {exp.technologies}
+                      </p> */}
                     </div>
-                  </Card>
+                  </div>
+
+                  {/* Timeline node */}
+                  <div
+                    className={`absolute left-4 md:left-1/2 -translate-x-1/2 z-10 ${exp.featured
+                      ? "w-4 h-4 bg-primary border-4 border-background"
+                      : "w-3 h-3 bg-border border-2 border-background"
+                      }`}
+                    style={
+                      exp.featured
+                        ? {
+                          boxShadow: "0 0 15px rgba(124, 58, 237, 0.6)",
+                        }
+                        : undefined
+                    }
+                  />
+
+                  {/* Empty spacer for the other side */}
+                  <div className="md:w-5/12" />
                 </div>
-              ))}
-            </div>
+              );
+            })}
+          </div>
+
+          {/* Remaining entries (3–5) */}
+          <div className="space-y-12 mt-12">
+            {experiences.slice(3).map((exp, index) => {
+              const actualIndex = index + 3;
+              const isLeft = actualIndex % 2 === 0;
+
+              return (
+                <div
+                  key={actualIndex}
+                  className={`relative flex flex-col ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                    } items-center justify-between gap-8 group`}
+                >
+                  {/* Card side */}
+                  <div
+                    className="md:w-5/12 text-left"
+                  >
+                    <div
+                      className={`${exp.cardBg} p-8 transition-all ${exp.hoverBg} border-l-4 ${exp.borderColor}`}
+                    >
+                      {/* Date */}
+                      <span
+                        className={`font-mono text-sm mb-2 block uppercase ${exp.dateColor}`}
+                      >
+                        {exp.period}
+                      </span>
+
+                      {/* Company */}
+                      <h3 className="font-bold text-2xl text-white">
+                        {exp.company}
+                      </h3>
+
+                      {/* Role */}
+                      <p className={`font-mono text-sm mb-4 ${exp.roleColor}`}>
+                        {exp.role}
+                      </p>
+
+                      {/* Location */}
+                      <p className="font-mono text-xs text-muted-foreground mb-4">
+                        {exp.location}
+                      </p>
+
+                      {/* Description bullets */}
+                      <ul className="space-y-2 text-muted-foreground text-sm">
+                        {exp.descriptionBullets.map((bullet, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2"
+                          >
+                            <span className="font-mono text-terminal-green shrink-0">
+                              &gt;
+                            </span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Achievements */}
+                      {exp.achievements.length > 0 && (
+                        <div className="mt-4 p-4 bg-surface-high/50 border-l-2 border-terminal-green">
+                          <p className="font-mono text-xs text-terminal-green mb-2">
+                            // achievements
+                          </p>
+                          <ul className="text-sm text-foreground space-y-1">
+                            {exp.achievements.map((achievement, idx) => (
+                              <li
+                                key={idx}
+                                className="flex items-start gap-2"
+                              >
+                                <span className="text-terminal-green shrink-0">
+                                  ✓
+                                </span>
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Tech stack */}
+                      {/* <p className="font-mono text-xs text-muted-foreground/60 mt-4">
+                        <span className="text-terminal-cyan">stack: </span>
+                        {exp.technologies}
+                      </p> */}
+                    </div>
+                  </div>
+
+                  {/* Timeline node */}
+                  <div
+                    className={`absolute left-4 md:left-1/2 -translate-x-1/2 z-10 ${exp.featured
+                      ? "w-4 h-4 bg-primary border-4 border-background"
+                      : "w-3 h-3 bg-border border-2 border-background"
+                      }`}
+                    style={
+                      exp.featured
+                        ? {
+                          boxShadow: "0 0 15px rgba(124, 58, 237, 0.6)",
+                        }
+                        : undefined
+                    }
+                  />
+
+                  {/* Empty spacer for the other side */}
+                  <div className="md:w-5/12" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@300;400;500;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        .dot-matrix {
+            background-image: radial-gradient(circle, #31353c 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#007184",
+                        "on-primary": "#3f008e",
+                        "on-secondary-fixed-variant": "#005321",
+                        "surface-container-high": "#262a31",
+                        "secondary-fixed-dim": "#4ae176",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#2d3137",
+                        "surface-variant": "#31353c",
+                        "on-primary-container": "#ede0ff",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "inverse-primary": "#732ee4",
+                        "surface-container-highest": "#31353c",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "on-secondary-fixed": "#002109",
+                        "primary-fixed": "#eaddff",
+                        "surface-container": "#1c2026",
+                        "secondary-container": "#00b954",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-error-container": "#ffdad6",
+                        "background": "#10141a",
+                        "tertiary-fixed": "#acedff",
+                        "on-surface": "#dfe2eb",
+                        "surface-bright": "#353940",
+                        "primary-fixed-dim": "#d2bbff",
+                        "surface-container-low": "#181c22",
+                        "primary": "#d2bbff",
+                        "on-secondary": "#003915",
+                        "inverse-surface": "#dfe2eb",
+                        "secondary-fixed": "#6bff8f",
+                        "on-tertiary": "#003640",
+                        "outline-variant": "#4a4455",
+                        "surface": "#10141a",
+                        "surface-tint": "#d2bbff",
+                        "on-secondary-container": "#004119",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface-container-lowest": "#0a0e14",
+                        "surface-dim": "#10141a",
+                        "on-surface-variant": "#ccc3d8",
+                        "outline": "#958da1",
+                        "on-tertiary-container": "#b7efff",
+                        "tertiary": "#4cd7f6",
+                        "on-primary-fixed": "#25005a",
+                        "error-container": "#93000a",
+                        "primary-container": "#7c3aed",
+                        "secondary": "#4ae176",
+                        "on-background": "#dfe2eb"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "2px", "xl": "2px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#10141a]/80 backdrop-blur-md border-b-0">
+<div class="font-['Space_Grotesk'] font-bold text-xl text-white tracking-widest uppercase">
+            EDWARD_KHOZE
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['JetBrains_Mono'] uppercase tracking-tighter text-sm text-[#22C55E] font-bold transition-colors duration-200 Active: scale-95 duration-75" href="#">//_projects</a>
+<a class="font-['JetBrains_Mono'] uppercase tracking-tighter text-sm text-slate-400 hover:text-[#06B6D4] transition-colors duration-200 Active: scale-95 duration-75" href="#">//_stack</a>
+<a class="font-['JetBrains_Mono'] uppercase tracking-tighter text-sm text-slate-400 hover:text-[#06B6D4] transition-colors duration-200 Active: scale-95 duration-75" href="#">//_experience</a>
+<a class="font-['JetBrains_Mono'] uppercase tracking-tighter text-sm text-slate-400 hover:text-[#06B6D4] transition-colors duration-200 Active: scale-95 duration-75" href="#">//_terminal</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-[#06B6D4] cursor-pointer">terminal</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-[#06B6D4] cursor-pointer">code</span>
+<button class="font-['JetBrains_Mono'] uppercase tracking-tighter text-sm bg-primary-container text-on-primary-container px-4 py-2 hover:opacity-90 transition-all">
+                DECRYPT_CV
+            </button>
+</div>
+</header>
+<main class="pt-24 min-h-screen">
+<!-- Breadcrumb Shell -->
+<div class="px-6 mb-12">
+<div class="font-mono text-tertiary-fixed-dim text-xs opacity-60">
+                root / projects / edward-khoze / <span class="text-secondary">notable_projects</span>
+</div>
+</div>
+<!-- NOTABLE PROJECTS SECTION -->
+<section class="px-6 mb-32 relative">
+<div class="mb-12">
+<h2 class="font-mono text-primary-container text-xl tracking-tighter uppercase mb-2">// notable_projects</h2>
+<div class="h-[1px] w-24 bg-primary-container/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<!-- Card 01 -->
+<div class="group bg-surface-container-low border border-primary-container/20 p-8 flex flex-col min-h-[400px] relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-primary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-12">
+<div class="font-mono text-[10px] text-primary-container opacity-60 tracking-widest uppercase">ID: 0x9281</div>
+<div class="font-mono text-xl font-bold text-on-surface-variant">01 /</div>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline text-2xl font-bold mb-4 leading-tight text-on-surface">Sitecore DXP Migration</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">
+                            Architected and led the delivery of large-scale enterprise web implementations for Fortune 500 clients using Sitecore DXP.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">Sitecore DXP</span>
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">Azure</span>
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">.NET</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary scale-75" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-mono text-xs text-secondary font-bold uppercase tracking-widest">Successful Delivery</span>
+</div>
+</div>
+</div>
+<!-- Card 02 -->
+<div class="group bg-surface-container-low border border-secondary/20 p-8 flex flex-col min-h-[400px] relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-12">
+<div class="font-mono text-[10px] text-secondary opacity-60 tracking-widest uppercase">ID: 0x4422</div>
+<div class="font-mono text-xl font-bold text-on-surface-variant">02 /</div>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline text-2xl font-bold mb-4 leading-tight text-on-surface">Enterprise Cloud Solutions</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">
+                            Delivered high-profile search implementation for a key banking client on time and within budget, cementing further work.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">AWS</span>
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">Microservices</span>
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">API Management</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary scale-75" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="font-mono text-xs text-secondary font-bold uppercase tracking-widest">50% Perf Improvement</span>
+</div>
+</div>
+</div>
+<!-- Card 03 -->
+<div class="group bg-surface-container-low border border-tertiary/20 p-8 flex flex-col min-h-[400px] relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-12">
+<div class="font-mono text-[10px] text-tertiary opacity-60 tracking-widest uppercase">ID: 0x1109</div>
+<div class="font-mono text-xl font-bold text-on-surface-variant">03 /</div>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline text-2xl font-bold mb-4 leading-tight text-on-surface">CI/CD Pipeline Automation</h3>
+<p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">
+                            Reduced deployment time from hours to minutes through advanced CI/CD pipeline optimization and automated testing.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">Azure DevOps</span>
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">Terraform</span>
+<span class="font-mono text-[10px] border border-outline-variant/30 px-2 py-1 uppercase text-on-surface-variant">Docker</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary scale-75" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-mono text-xs text-secondary font-bold uppercase tracking-widest">Hours → Minutes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT SECTION -->
+<section class="px-6 mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div class="max-w-xl">
+<div class="mb-8">
+<h2 class="font-mono text-tertiary text-xl tracking-tighter uppercase mb-4">// contact.init()</h2>
+<div class="inline-flex items-center gap-3 px-4 py-2 bg-secondary/10 border border-secondary/20">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-mono text-[11px] font-bold text-secondary uppercase tracking-widest">● OPEN TO OPPORTUNITIES</span>
+</div>
+</div>
+<div class="space-y-6 mb-12">
+<a class="group flex items-center justify-between py-4 border-b border-outline-variant/10 hover:border-primary-container/50 transition-colors" href="mailto:jobs@edkhoze.com">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">mail</span>
+<span class="font-headline text-lg text-on-surface">JOBS@EDKHOZE.COM</span>
+</div>
+<span class="font-mono text-on-surface-variant group-hover:text-primary-container transition-colors">→</span>
+</a>
+<a class="group flex items-center justify-between py-4 border-b border-outline-variant/10 hover:border-secondary/50 transition-colors" href="tel:+61423632922">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">call</span>
+<span class="font-headline text-lg text-on-surface">+61 423 632 922</span>
+</div>
+<span class="font-mono text-on-surface-variant group-hover:text-secondary transition-colors">→</span>
+</a>
+<a class="group flex items-center justify-between py-4 border-b border-outline-variant/10 hover:border-tertiary/50 transition-colors" href="https://linkedin.com/in/edwardkhoze">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">share</span>
+<span class="font-headline text-lg text-on-surface">LINKEDIN/EDWARDKHOZE</span>
+</div>
+<span class="font-mono text-on-surface-variant group-hover:text-tertiary transition-colors">→</span>
+</a>
+</div>
+</div>
+<div class="bg-surface-container p-8 border border-outline-variant/20 relative">
+<div class="absolute top-4 right-4 flex gap-1">
+<div class="w-2 h-2 bg-outline-variant/30 rounded-full"></div>
+<div class="w-2 h-2 bg-outline-variant/30 rounded-full"></div>
+<div class="w-2 h-2 bg-outline-variant/30 rounded-full"></div>
+</div>
+<form class="space-y-8">
+<div class="relative">
+<label class="block font-mono text-[10px] text-tertiary-fixed-dim uppercase mb-2">// name_</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant/30 focus:border-tertiary focus:ring-0 text-on-surface font-mono text-sm px-0 py-2 placeholder:text-outline/40" placeholder="ENTER_NAME" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-mono text-[10px] text-tertiary-fixed-dim uppercase mb-2">// email_</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant/30 focus:border-tertiary focus:ring-0 text-on-surface font-mono text-sm px-0 py-2 placeholder:text-outline/40" placeholder="USER@DOMAIN.COM" type="email"/>
+</div>
+<div class="relative">
+<label class="block font-mono text-[10px] text-tertiary-fixed-dim uppercase mb-2">// message_</label>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant/30 focus:border-tertiary focus:ring-0 text-on-surface font-mono text-sm px-0 py-2 placeholder:text-outline/40 resize-none" placeholder="DESCRIBE_PROJECT_OR_INQUIRY" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-mono text-sm font-bold py-4 tracking-widest transition-all Active:scale-[0.98] flex items-center justify-center gap-4" type="submit">
+<span class="material-symbols-outlined text-sm">terminal</span>
+                        EXECUTE_SEND
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-6 py-8 gap-4 bg-[#10141a] border-t border-[#31353c]/20">
+<div class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-slate-500">
+            © 2024 KHOZE_ARCHITECT // COMPILED_SUCCESSFULLY
+        </div>
+<div class="flex gap-8">
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-slate-500 hover:text-white underline decoration-[#7C3AED] transition-all Active: opacity-80" href="#">GITHUB</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-slate-500 hover:text-white underline decoration-[#7C3AED] transition-all Active: opacity-80" href="#">LINKEDIN</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-slate-500 hover:text-white underline decoration-[#7C3AED] transition-all Active: opacity-80" href="#">SOURCE_CODE</a>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-[#22C55E]"></div>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#06B6D4]">SYSTEM_STABLE</span>
+</div>
+</footer>
+</body></html>

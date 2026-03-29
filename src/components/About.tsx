@@ -1,86 +1,119 @@
-import { Card } from "@/components/ui/card";
-import { Award, Users, Briefcase, Globe } from "lucide-react";
-
 const About = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const highlights = [
+  const stats = [
     {
-      icon: Briefcase,
-      title: "20+ Years",
-      description: "Industry Experience across multiple verticals",
+      tag: "/experience",
+      tagColor: "text-terminal-green",
+      value: "20+",
+      label: "YEARS IN IT",
+      hoverColor: "hover:border-[hsl(136,71%,67%)]",
       clickable: true,
-      href: "experience"
+      href: "experience",
     },
     {
-      icon: Globe,
-      title: "Global",
-      description: "Australia, USA, Europe, Singapore"
+      tag: "/presence",
+      tagColor: "text-terminal-cyan",
+      value: "GLOBAL",
+      label: "AU, USA, EUROPE, SG",
+      hoverColor: "hover:border-[hsl(189,94%,43%)]",
     },
     {
-      icon: Users,
-      title: "Delivery Management",
-      description: "Agile (Scrum, Kanban). Managing team of up to 12 ppl",
-    },
-    {
-      icon: Award,
-      title: "Certified",
-      description: "MCAD, Azure (2 certificates). Sitecore (4 certificates)",
+      tag: "/leadership",
+      tagColor: "text-primary-foreground",
+      value: "12+",
+      label: "TEAM MANAGEMENT",
+      hoverColor: "hover:border-primary",
       clickable: true,
-      href: "education"
-    }
+      href: "experience",
+    },
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">About Me</h2>
-            <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
-          </div>
-          
-          <Card className="p-6 md:p-8 shadow-lg border-border/50 mb-12">
-            <p className="text-lg text-foreground leading-relaxed mb-4">
-              I am a Solution Architect with over 20 years' experience in the IT industry, 
-              half of which was spent in Australia, the other half overseas, in Europe, 
-              Singapore and the USA. I have a proven track record delivering large and complex projects 
-              for Fortune 500 companies, as well as small to medium enterprises.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              I possess solid team management skills, ability to work under pressure, passion for 
-              learning new technology, as well as strong customer focus.
-            </p>
-            {/* <p className="text-lg text-foreground font-semibold mb-4">
-              I specialise in the following areas:
-            </p>
-            <ul className="text-base text-muted-foreground leading-relaxed space-y-2">
-              <li>• <span className="font-medium text-foreground">Solution Design and Architecture</span> – Requirements gathering & analysis, defining functional & non-functional specs, specifying solution's quality attributes, constrains & assumptions</li>
-              <li>• <span className="font-medium text-foreground">Delivery & Team Management</span> – Agile (Scrum, Kanban), managing teams up to 12 people (back-end & front-end developers, QAs)</li>
-              <li>• <span className="font-medium text-foreground">Cloud Platforms</span> – Microsoft Azure, AWS, Vercel</li>
-              <li>• <span className="font-medium text-foreground">DevOps</span> – CI/CD pipelines with Coded UI (Selenium) tests using infrastructure-as-code (IaC) approaches. Tools: Azure DevOps, ARM templates, Terraform, PowerShell scripts, Docker</li>
-              <li>• <span className="font-medium text-foreground">Technical Pre-Sales</span> – RFI / RFP responses, project estimates, proposed solution presentation</li>
-              <li>• <span className="font-medium text-foreground">Software Development</span> – .NET, MS Azure, Sitecore DXP (MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP / Personalize), Front-end (HTML, CSS, JS, React, Angular, Next.js, TypeScript), API development, AI tools, DBs (SQL, Cosmos DB, MongoDB)</li>
-            </ul> */}
-          </Card>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {highlights.map((item, index) => (
-              <Card 
-                key={index}
-                onClick={() => item.clickable && scrollToSection(item.href)}
-                className={`p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 border-border/50 ${
-                  item.clickable ? 'cursor-pointer hover:scale-105 hover:border-primary/50' : ''
+    <section id="about" className="bg-surface-low py-24 relative overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-6">
+        {/* Section header */}
+        <div className="mb-12">
+          <h2 className="font-mono text-terminal-green text-xl mb-2">
+            // about_me
+          </h2>
+          <div className="h-1 w-24 bg-[hsl(136,71%,67%)]" />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Stats Column */}
+          <div className="lg:col-span-4 space-y-6">
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                onClick={() => stat.clickable && scrollToSection(stat.href!)}
+                className={`bg-background border border-border/20 p-8 flex flex-col items-start transition-colors ${stat.hoverColor} ${
+                  stat.clickable ? "cursor-pointer" : ""
                 }`}
               >
-                <item.icon className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </Card>
+                <span className={`font-mono text-sm mb-2 ${stat.tagColor}`}>
+                  {stat.tag}
+                </span>
+                <span className="text-5xl font-bold text-white mb-1">
+                  {stat.value}
+                </span>
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
+                  {stat.label}
+                </span>
+              </div>
             ))}
           </div>
+
+          {/* Narrative Column */}
+          <div className="lg:col-span-8">
+            <div className="bg-surface-lowest border border-border/30 p-8 md:p-12 relative">
+              {/* Background decorative hex */}
+              <div className="absolute top-4 right-4 text-border/20 font-mono text-8xl pointer-events-none select-none">
+                0x14
+              </div>
+
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold text-white mb-6">
+                  Solution Architect &amp; Team Lead
+                </h3>
+
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  I am a Solution Architect with over 20 years' experience in
+                  the IT industry, half of which was spent in Australia, the
+                  other half overseas — Europe, Singapore and the USA. I have a
+                  proven track record delivering large and complex projects for
+                  Fortune 500 companies, as well as small to medium enterprises.
+                </p>
+
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  I possess solid team management skills, ability to work under
+                  pressure, passion for learning new technology, as well as
+                  strong customer focus. I specialize in Solution Design &amp;
+                  Architecture, Cloud Platforms (Azure/AWS), and modern DevOps
+                  practices.
+                </p>
+
+                {/* Quote block */}
+                <div className="bg-background p-6 border-l-4 border-terminal-cyan">
+                  <p className="font-mono text-terminal-cyan italic">
+                    "Architecting reliable, scalable solutions for the world's
+                    leading brands through precision engineering and modern DXP
+                    ecosystems."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Background Decoration */}
+      <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none overflow-hidden">
+        <div className="text-[20rem] font-bold text-primary select-none rotate-12 transform translate-x-1/2">
+          DXP
         </div>
       </div>
     </section>

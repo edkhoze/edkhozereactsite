@@ -1,109 +1,120 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Cloud, Code, GitBranch, Layers, PresentationIcon, Users } from "lucide-react";
-
 const Skills = () => {
   const skillCategories = [
     {
-      icon: Layers,
       title: "Solution Design & Architecture",
+      borderColor: "border-primary",
+      dotColor: "bg-primary",
       skills: [
         "Requirements gathering & analysis",
         "Defining functional & non-functional specs",
-        "Specifying solution's quality attributes, constraints & assumptions"
-      ]
+        "Specifying solution's quality attributes",
+        "Specifying constrains & assumptions",
+        "cloud-native, microservices, serverless, event-driven architectures",
+        "Tools: Miro, MS Visio, Draw.io, Sparx EA, UML"
+      ],
     },
     {
-      icon: Users,
-      title: "Delivery & Team Management",
+      title: "Enterprise Web Applications",
+      borderColor: "border-terminal-green",
+      dotColor: "bg-terminal-green",
       skills: [
-        "Agile: Scrum, Kanban",
-        "Team Management: Up to 12 people"
-      ]
+        "Frontend: JS, React, Next.js, TypeScript",
+        "Backend: .NET, C#, ASP.NET Core, TypeScript",
+        "Databases: MS SQL Server, Cosmos DB, MongoDB",
+        "APIs: REST, GraphQL, Apigee, Azure API Management",
+        "Delivery: Agile (Scrum, Kanban) and Waterfall",
+        "Team Management: Up to 12 people (BE, FE, QA)"
+      ],
     },
     {
-      icon: Cloud,
       title: "Cloud Platforms",
+      borderColor: "border-terminal-cyan",
+      dotColor: "bg-terminal-cyan",
       skills: [
-        "MS Azure (Sitecore PaaS, API Management, Containers, App Services, Functions, Storage, Event Grid / Event Hubs)",
+        "MS Azure",
         "AWS",
-        "Vercel"
-      ]
+        "Vercel",
+        "Render",
+      ],
     },
     {
-      icon: GitBranch,
       title: "DevOps",
+      borderColor: "border-primary",
+      dotColor: "bg-primary",
       skills: [
         "CI / CD Pipelines",
-        "infrastructure-as-code (IaC)",
+        "Docker containers",
+        "Infrastructure as Code (IaC)",
+        "Terraform",
         "Azure DevOps",
-        "ARM Templates",
-        "PowerShell Scripts",
+        "ARM & Bicep templates",
+        "PowerShell",
         "Docker",
-        "Selenium UI Tests",
-        "Terraform"
-      ]
+        "Selenium"
+      ],
     },
     {
-      icon: PresentationIcon,
       title: "Technical Pre-Sales",
+      borderColor: "border-terminal-green",
+      dotColor: "bg-terminal-green",
       skills: [
         "RFI / RFP responses",
         "Project estimates",
-        "Proposed solution presentations"
-      ]
+        "Client workshops & presentations",
+        "Partnering with delivery and sales teams to design best-of-breed solutions"
+      ],
     },
     {
-      icon: Code,
-      title: "Software Development",
+      title: "AI / LLM tools",
+      borderColor: "border-destructive",
+      dotColor: "bg-destructive",
       skills: [
-        "Microsoft Stack: .NET, C#, Azure platform",
-        "Sitecore DXP: MVC, JSS & XM Cloud, Headless, Solr & Coveo, CDP / Personalize",
-        "Front-end: HTML, CSS, JS, React, Angular, Next.js, TypeScript",
-        "API Development (Web APIs, Google Apigee, Azure API Management, Swagger, Postman)",
-        "Databases: MS SQL Server, Cosmos DB, MongoDB",
-        "AI Tools: GitHub Copilot, Claude Code, Cursor, Lovable.dev"
-      ]
-    }
+        "Python",
+        "LangChain & LangGraph",
+        "Retrieval-Augmented Generation (RAG)",
+        "Microsoft Foundry",
+        "Custom Agents",
+        "Claude Code",
+        "GitHub Copilot",
+        "Google Antigravity, Jules, Stitch",
+      ],
+    },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">I specialise in the following areas</h2>
-            <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {skillCategories.map((category, index) => (
-              <Card 
-                key={index}
-                className="p-6 shadow-md hover:shadow-lg transition-all duration-300 border-border/50"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <category.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground pt-2">
-                    {category.title}
-                  </h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge 
-                      key={skillIndex}
-                      variant="secondary"
-                      className="text-sm"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
+    <section id="skills" className="py-24 bg-background">
+      <div className="max-w-[1440px] mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="font-mono text-terminal-green text-2xl font-bold tracking-tight whitespace-nowrap">
+            // skills_matrix
+          </h2>
+          <div className="h-px flex-grow bg-border/20" />
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category, index) => (
+            <div
+              key={index}
+              className={`bg-surface-low p-6 border-t-4 ${category.borderColor}`}
+            >
+              <h3 className="font-mono text-sm mb-6 text-muted-foreground font-bold">
+                {"{ "}{category.title}{" }"}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="bg-surface-highest px-3 py-1 font-mono text-xs flex items-center gap-2 border border-border/10"
+                  >
+                    <span className={`w-1.5 h-1.5 ${category.dotColor} shrink-0`} />
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

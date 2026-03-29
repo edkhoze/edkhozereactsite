@@ -2,111 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Definition of the design system: "The Compiled Architect"
+   Dark-only IDE/terminal aesthetic. All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    /* Base surfaces - obsidian tonal stack */
+    --background: 216 27% 8%;          /* #10141a */
+    --foreground: 222 16% 90%;         /* #dfe2eb */
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 216 14% 13%;               /* #1c2026 surface_container */
+    --card-foreground: 222 16% 90%;    /* #dfe2eb */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover: 216 10% 17%;            /* #262a31 surface_container_high */
+    --popover-foreground: 222 16% 90%;
 
-    --primary: 215 85% 45%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary: vivid purple */
+    --primary: 263 84% 58%;            /* #7C3AED */
+    --primary-foreground: 263 100% 86%; /* #d2bbff */
 
-    --secondary: 215 20% 95%;
-    --secondary-foreground: 215 25% 15%;
+    /* Secondary: syntax-highlight green */
+    --secondary: 142 71% 45%;          /* #22C55E */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 15% 96%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 216 10% 17%;              /* #262a31 */
+    --muted-foreground: 260 8% 60%;    /* #958da1 */
 
-    --accent: 195 85% 50%;
+    /* Accent: cyan/tertiary */
+    --accent: 189 94% 43%;             /* #06B6D4 */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 2 100% 84%;         /* #ffb4ab */
+    --destructive-foreground: 216 27% 8%;
 
-    --border: 215 20% 90%;
-    --input: 215 20% 90%;
-    --ring: 215 85% 45%;
+    --border: 260 10% 30%;             /* #4a4455 outline_variant */
+    --input: 260 10% 30%;
+    --ring: 263 84% 58%;               /* #7C3AED */
 
-    --radius: 0.75rem;
-    
-    --gradient-primary: linear-gradient(135deg, hsl(215 85% 45%), hsl(195 85% 50%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(215 20% 98%));
-    
-    --shadow-sm: 0 2px 8px hsl(215 25% 15% / 0.04);
-    --shadow-md: 0 4px 16px hsl(215 25% 15% / 0.08);
-    --shadow-lg: 0 8px 32px hsl(215 25% 15% / 0.12);
-    
+    --radius: 0px;
+
+    /* Surface scale (tonal layering) */
+    --surface-lowest: 216 27% 6%;      /* #0a0e14 */
+    --surface-low: 216 14% 11%;        /* #181c22 */
+    --surface: 216 14% 13%;            /* #1c2026 */
+    --surface-high: 216 10% 17%;       /* #262a31 */
+    --surface-highest: 216 8% 21%;     /* #31353c */
+
+    /* Semantic color aliases */
+    --tertiary: 189 94% 43%;           /* #06B6D4 */
+    --tertiary-light: 189 91% 63%;     /* #4cd7f6 */
+    --secondary-light: 136 71% 67%;    /* #4ae176 */
+
+    /* Gradients */
+    --gradient-cta: linear-gradient(135deg, #d2bbff, #7c3aed);
+    --gradient-subtle: linear-gradient(180deg, hsl(216 27% 8%), hsl(216 14% 11%));
+
+    /* Ambient purple-tinted shadows */
+    --shadow-sm: 0 4px 24px hsl(263 84% 58% / 0.04);
+    --shadow-md: 0 8px 32px hsl(263 84% 58% / 0.06);
+    --shadow-lg: 0 12px 40px hsl(263 84% 58% / 0.08);
+    --shadow-glow: 0 0 20px hsl(263 84% 58% / 0.25);
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 215 30% 8%;
-    --foreground: 215 20% 95%;
-
-    --card: 215 25% 12%;
-    --card-foreground: 215 20% 95%;
-
-    --popover: 215 25% 12%;
-    --popover-foreground: 215 20% 95%;
-
-    --primary: 215 85% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 215 25% 18%;
-    --secondary-foreground: 215 20% 95%;
-
-    --muted: 215 25% 18%;
-    --muted-foreground: 215 15% 65%;
-
-    --accent: 195 85% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 215 85% 55%;
-    
-    --gradient-primary: linear-gradient(135deg, hsl(215 85% 55%), hsl(195 85% 60%));
-    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%), hsl(215 25% 12%));
-    
-    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.2);
-    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.3);
-    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.4);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (unused but kept for shadcn compat) */
+    --sidebar-background: 216 27% 8%;
+    --sidebar-foreground: 222 16% 90%;
+    --sidebar-primary: 263 84% 58%;
+    --sidebar-primary-foreground: 263 100% 86%;
+    --sidebar-accent: 216 10% 17%;
+    --sidebar-accent-foreground: 222 16% 90%;
+    --sidebar-border: 260 10% 30%;
+    --sidebar-ring: 263 84% 58%;
   }
 }
 
@@ -115,32 +83,64 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    color-scheme: dark;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 
 @layer utilities {
-  .animate-fade-in {
-    animation: fade-in 1s ease-out;
+  /* Dot-matrix texture - IDE background feel */
+  .bg-dot-matrix {
+    background-image: radial-gradient(circle, hsl(var(--foreground) / 0.08) 1px, transparent 1px);
+    background-size: 16px 16px;
   }
-  
+
+  /* Glassmorphism - for floating elements (nav, tooltips) */
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: hsl(var(--background) / 0.8);
+    border-bottom: 1px solid hsl(var(--border) / 0.3);
+  }
+
+  /* Gradient CTA button background */
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  /* Animate fade-in (keep for hero) */
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(16px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
-  .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
-    background-size: 40px 40px;
+
+  /* Terminal comment prefix color */
+  .text-terminal-green {
+    color: hsl(var(--secondary-light));
+  }
+
+  /* Cyan prompt color */
+  .text-terminal-cyan {
+    color: hsl(var(--tertiary-light));
+  }
+
+  /* Ambient glow on hover */
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
   }
 }

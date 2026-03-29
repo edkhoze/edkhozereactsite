@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card";
 import { TrendingUp, Award, Zap, Target } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 const Achievements = () => {
   const achievements = [
@@ -11,13 +11,13 @@ const Achievements = () => {
     },
     {
       icon: Award,
-      metric: "Successful Delivery",
+      metric: "EPAM Featured",
       title: "Key Client Win",
-      description: "Large healthcare engagement that I helped sell and then architected was featured in EPAM quarterly investor presentations as key client win"
+      description: "Large healthcare engagement that I helped sell and then architected was featured in EPAM quarterly investor presentations"
     },
     {
       icon: Zap,
-      metric: "Hours → Minutes",
+      metric: "hrs → mins",
       title: "Deployment Automation",
       description: "Reduced deployment time from hours to minutes through CI/CD pipeline optimization"
     },
@@ -25,40 +25,39 @@ const Achievements = () => {
       icon: Target,
       metric: "20-25%",
       title: "TTFB Optimization",
-      description: "Improved time-to-first-byte performance through caching and load testing refinement"
+      description: "Improved time-to-first-byte through caching and load testing refinement"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/50 to-background" id="achievements">
+    <section className="py-20 bg-background" id="achievements">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Key Achievements</h2>
-            <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
+          <SectionHeader index={3} title="Key Achievements" />
+
+          <div className="grid md:grid-cols-2 gap-px bg-border/10">
             {achievements.map((item, index) => (
-              <Card 
+              <div
                 key={index}
-                className="p-8 shadow-md hover:shadow-lg transition-all duration-300 border-border/50 relative overflow-hidden group"
+                className="bg-surface-low p-8 group hover-glow transition-all duration-300 relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Subtle purple glow overlay on hover */}
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 pointer-events-none" />
+
                 <div className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="h-6 w-6 text-primary" />
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="p-2 bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <item.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-primary">{item.metric}</div>
+                    <div className="font-mono text-2xl font-bold text-primary text-right">
+                      {item.metric}
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
