@@ -26,7 +26,7 @@ const Index = () => {
         <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between">
           <p className="font-mono text-xs text-muted-foreground/60">
             <span className="text-terminal-green">// EOF</span>
-            {"  "}&copy; {new Date().getFullYear()} Edward Khoze // compiled successfully
+            {"  "}&copy; {new Date().getFullYear()} Edward Khoze
           </p>
           <div className="flex items-center gap-2">
             <span className="font-mono text-[10px] uppercase text-muted-foreground/60 mr-2">Status</span>
